@@ -1,7 +1,7 @@
 import "./Contacts.css";
 
 import { useState } from "react";
-import { Contact } from "./Contact";
+import { Contact } from "../Contact/Contact";
 
 export const Contacts = ({contacts}) => {
 
@@ -68,7 +68,7 @@ export const Contacts = ({contacts}) => {
                 <span className="label">Gender</span><br/>
                 <label>female<input type="checkbox" name="female" checked={stateCheckboxes.female} onChange={handleCheckboxes}/></label>
                 <label>male<input type="checkbox" name="male" checked={stateCheckboxes.male} onChange={handleCheckboxes}/></label>
-                <label>unchecked<input type="checkbox" name="unknown" checked={stateCheckboxes.unknown} onChange={handleCheckboxes}/></label>
+                <label>unknown<input type="checkbox" name="unknown" checked={stateCheckboxes.unknown} onChange={handleCheckboxes}/></label>
             </div>
             <div className="contactsList">{stateContacts.map(item => <Contact key={item.id} contact={item}/>)}</div>
         </>

@@ -1,6 +1,6 @@
 import './Contact.css';
-import female from '../assets/images/person-dress-solid.svg'
-import male from '../assets/images/person-solid.svg'
+import female from '../../assets/images/person-dress-solid.svg';
+import male from '../../assets/images/person-solid.svg';
 
 export const Contact = ({contact}) => {
     const gender = contact.gender === 'female' ? female : contact.gender === 'male' ? male : '';

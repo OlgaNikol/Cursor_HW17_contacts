@@ -1,7 +1,7 @@
 import './App.css';
 import uuid4 from "uuid4";
 
-import { Contacts } from './components/Contacts';
+import { Contacts } from './components/Contacts/Contacts';
 
 const contacts = [{
     id: uuid4(),
