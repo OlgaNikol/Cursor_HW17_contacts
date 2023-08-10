@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Cursor_HW17_contacts/static/css/main.f4c257e5.css",
-    "main.js": "/Cursor_HW17_contacts/static/js/main.8304e65b.js",
+    "main.js": "/Cursor_HW17_contacts/static/js/main.c0efe851.js",
     "index.html": "/Cursor_HW17_contacts/index.html",
     "static/media/person-dress-solid.svg": "/Cursor_HW17_contacts/static/media/person-dress-solid.be7cc8ea23448732cff7242f28b9fbf9.svg",
     "static/media/person-solid.svg": "/Cursor_HW17_contacts/static/media/person-solid.0ba81d6f6e3e03321b3e75697dd31ca6.svg",
     "main.f4c257e5.css.map": "/Cursor_HW17_contacts/static/css/main.f4c257e5.css.map",
-    "main.8304e65b.js.map": "/Cursor_HW17_contacts/static/js/main.8304e65b.js.map"
+    "main.c0efe851.js.map": "/Cursor_HW17_contacts/static/js/main.c0efe851.js.map"
   },
   "entrypoints": [
     "static/css/main.f4c257e5.css",
-    "static/js/main.8304e65b.js"
+    "static/js/main.c0efe851.js"
   ]
 }
