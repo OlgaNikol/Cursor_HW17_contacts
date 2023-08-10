@@ -1,25 +1,51 @@
-import logo from './logo.svg';
 import './App.css';
+import uuid4 from "uuid4";
+
+import { Contacts } from './components/Contacts';
+
+const contacts = [{
+    id: uuid4(),
+    firstName: "Барней",
+    lastName: "Стинсовський",
+    phone: "+380956319521",
+    gender: "male"
+}, {
+    id: uuid4(),
+    firstName: "Робін",
+    lastName: "Щербатська",
+    phone: "+380931460123",
+    gender: "female"
+}, {
+    id: uuid4(),
+    firstName: "Анонімний",
+    lastName: "Анонімус",
+    phone: "+380666666666"
+}, {
+    id: uuid4(),
+    firstName: "Лілія",
+    lastName: "Олдровна",
+    phone: "+380504691254",
+    gender: "female"
+}, {
+    id: uuid4(),
+    firstName: "Маршен",
+    lastName: "Еріксонян",
+    phone: "+380739432123",
+    gender: "male"
+}, {
+    id: uuid4(),
+    firstName: "Теодор",
+    lastName: "Мотсбес",
+    phone: "+380956319521",
+    gender: "male"
+}];
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Contacts contacts={contacts}/>
+        </div>
+    );
 }
 
 export default App;
