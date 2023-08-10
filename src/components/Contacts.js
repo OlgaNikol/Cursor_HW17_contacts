@@ -10,24 +10,55 @@ export const Contacts = ({contacts}) => {
     const [stateCheckboxes, setCheckboxes] = useState({female: true, male: true, unknown: true});
 
     const handleSearchChange = (event) => {
-        const filteredContacts = contacts.filter(contact => (contact.firstName + contact.lastName + contact.phone).toLowerCase().match(event.target.value)?.length > 0);
         setSearch(event.target.value);
-        setContacts(filteredContacts);
+        filter('input', event);
     }
 
     const handleCheckboxes = (event) => {
         setCheckboxes({...stateCheckboxes, [event.target.name]: event.target.checked});
-        const unchecked = [];
+        filter('checkbox', event);
+    }
 
-        for (const key in stateCheckboxes) {
-            if (stateCheckboxes[key] === true) {
-                if (key === 'unknown') unchecked.push(undefined);
-                unchecked.push(key);
+    const getSearchContacts = (searchStr, filteredContacts) => {
+        const contactsVar = filteredContacts || contacts;
+        return contactsVar.filter(contact => (contact.firstName + contact.lastName + contact.phone).toLowerCase().match(searchStr)?.length > 0);
+    }
+
+    const getCheckedContacts = (checkboxes, filteredContacts) => {
+        const checked = [];
+        const contactsVar = filteredContacts || contacts;
+
+        for (const key in checkboxes) {
+            if (checkboxes[key] === true) {
+                if (key === 'unknown') checked.push(undefined);
+                checked.push(key);
             }
         }
 
-        const filteredContacts = contacts.filter(contact => unchecked.includes(contact.gender));
-        setContacts(filteredContacts);
+        return contactsVar.filter(contact => checked.includes(contact.gender));
+    }
+
+    function filter (element, event) {
+        if (element === 'input') {
+            let filteredContacts = getSearchContacts(event.target.value);
+
+            if (Object.values(stateCheckboxes).includes(false)) {
+                filteredContacts = getCheckedContacts(stateCheckboxes, filteredContacts);
+            }
+
+            setContacts(filteredContacts);
+        }
+
+        if (element === 'checkbox') {
+            const checkboxes = {...stateCheckboxes, [event.target.name]: event.target.checked};
+            let filteredContacts = getCheckedContacts(checkboxes);
+
+            if (stateSearch.length > 0) {
+                filteredContacts = getSearchContacts(stateSearch, filteredContacts);
+            }
+
+            setContacts(filteredContacts);
+        }
     }
 
     return (
