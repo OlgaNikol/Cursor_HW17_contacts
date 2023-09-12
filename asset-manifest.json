@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/Cursor_HW17_contacts/static/css/main.f4c257e5.css",
+    "main.css": "/Cursor_HW17_contacts/static/css/main.34287d4b.css",
     "main.js": "/Cursor_HW17_contacts/static/js/main.c0efe851.js",
-    "index.html": "/Cursor_HW17_contacts/index.html",
+    "static/media/bg.jpg": "/Cursor_HW17_contacts/static/media/bg.5cf94b1c269f763106d1.jpg",
     "static/media/person-dress-solid.svg": "/Cursor_HW17_contacts/static/media/person-dress-solid.be7cc8ea23448732cff7242f28b9fbf9.svg",
+    "index.html": "/Cursor_HW17_contacts/index.html",
     "static/media/person-solid.svg": "/Cursor_HW17_contacts/static/media/person-solid.0ba81d6f6e3e03321b3e75697dd31ca6.svg",
-    "main.f4c257e5.css.map": "/Cursor_HW17_contacts/static/css/main.f4c257e5.css.map",
+    "main.34287d4b.css.map": "/Cursor_HW17_contacts/static/css/main.34287d4b.css.map",
     "main.c0efe851.js.map": "/Cursor_HW17_contacts/static/js/main.c0efe851.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4c257e5.css",
+    "static/css/main.34287d4b.css",
     "static/js/main.c0efe851.js"
   ]
 }
